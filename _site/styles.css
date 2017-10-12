@@ -8,116 +8,159 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-html, body, main {
-  min-height: 100%;
+html, body{
+  height: 100%;
+  font-size: 12px;
 }
 li{
   list-style: none;
   overflow: hidden;
+  display: block;
 }
 ul {
   overflow: hidden;
 }
 a{
   text-decoration: none;
+  display: block;
+  width: auto;
 }
-nav {
-  background-color: black;
-  overflow: hidden;
+img{
+  width: 100%;
 }
-
 /*END RESET*/
+
 /*LAYOUT STYLES*/
 @media only screen and (min-width: 0px) {
-  main{
-    min-height: 750px;
+  /*STYLES FOR INDEX PAGE*/
+  .padding-contain {
+    width: 100%;
+    padding: 0 10%;
   }
-  .container{
-    width:95%;
-    margin: 0 2.5%;
+  body.hero{
+    background-image: url('img/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  main.hero {
+    height: 80%;
     position: relative;
   }
-  .float-half-left, .float-half-right {
-    float: none;
-    width: 100%;
-    margin-bottom: 1em;
+  nav.hero {
+    height: 20%:
   }
-}
-@media only screen and (min-width: 576px) {
-  .container{
-    width:90%;
-    margin: 0 5%;
+  div.logo {
+    width:50%;
+    height: 50%;
+    margin: auto;
+    position: relative;
+    top: 25%;
   }
-  .float-half-left {
-    float: left;
-    width: 47.5%;
+  /*STYLES FOR PAGES*/
+  nav.page {
+    background-color: black;
   }
-  .float-half-right {
+  nav.page a {
+    padding: 3em;
+    color: white;
+  }
+  nav.page li {
     float: right;
-    width: 47.5%;
+  }
+  nav.page li:hover {
+    /*font-weight: bold;*/
+    text-shadow: 0 0 2px white;
+    background-color: rgba(255,255,255,.2);
+  }
+  nav.page li.left {
+    float: left;
+  }
+  main.page div.half-left {
+    width: 50%;
+    float: left;
+    padding-right: 2.5%;
+  }
+  div.half-left p, div.half-left h3, div.half-left h2, div.half-left ul {
+    padding-left: 20%;
+  }
+  main.page div.half-right {
+    width: 50%;
+    float: right;
+    padding-left: 2.5%;
+  }
+  div.half-right p, div.half-right h3, div.half-right h2, div.half-right ul{
+    padding-right: 20%;
+  }
+  div.half-left a,div.half-right a{
+    color: rgb(20,20,20);
+    display: inline;
+  }
+  main.page i {
+    display: inline-block;
+    padding-right: 1em;
+  }
+  article.menu-item {
+    padding: 1em 0;
+  }
+  article.menu-item h3:first-of-type {
+    float:left;
+  }
+  article.menu-item h3:last-of-type {
+    float:right;
+  }
+  article.menu-item p {
+    clear: both;
+  }
+  footer{
+    clear: both;
+    background-color: black;
+    padding: 2em 0;
+  }
+  img.bknd-image1 {
+    width: 600px;
+    position: absolute;
+    right: 15%;
+    top: -5%;
+    z-index: -1;
+    opacity: .4;
+  }
+  img.bknd-image2 {
+    width: 40%;
+    position: absolute;
+    left: 0%;
+    top: 40px;
+    z-index: -1;
+    opacity: .4;
+  }
+  img.bknd-image3 {
+    width: 50%;
+    position: absolute;
+    left: 0%;
+    top: -10%;
+    z-index: -1;
+    opacity: .3;
+  }
+  ul.social-list {
+    margin-top: 2em;
+  }
+  ul.social-list li {
+    display: inline-block;
+  }
+  ul.social-list li i {
+    font-size: 2em;
+    margin-right: 1em;
+  }
+  ul.social-list li a {
+    color: black;
   }
 }
 @media only screen and (min-width: 768px) {
-  .container{
-    width:90%;
-    margin: 0 5%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .container{
-    width:90%;
-    margin: 0 5%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .container{
-    width:90%;
-    margin: 0 5%;
-  }
 }
 /*END LAYOUT STYLES*/
 
-/*HEADER STYLES*/
-  /*NAV STYLES*/
-.nav-home {
-  float: left;
-  color: white;
-  padding: 1em 2em;
-}
-nav li {
-  float:right;
-}
-li a {
-  padding: 1em;
-  color: white;
-  display: block;
-}
-li a:hover {
-  background-color: white;
-  color: darkgray;
-  transition: all .1s;
-}
-li a:active {
-  color: black;
-}
-  /*END NAV STYLES*/
-main {
-  background-image:url("img/hero.jpeg");
-  background-position: center;
-  background-size: cover;
-  /*position: relative;*/
-}
-div.slider {
-  position: absolute;
-  bottom: 20%; left:20%;
-  width: 60%; height: 60%;
-  background-image: url("img/cafeLuna.svg");
-  background-position: center;
-  background-size:contain;
-  background-repeat: no-repeat;
-  /*background-color: green;*/
-}
-/*END HEADER STYLSE*/
+/*NAV STYLES*/
+/*END NAV STYLES*/
+
 /*TYPOGRAPHY STYLES*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 header,main,footer {
@@ -134,6 +177,7 @@ h1.page-title{
 h2{
   font-size: 3em;
   font-weight: 300;
+  margin-top: 1.5em;
   margin-bottom: .5em;
   text-transform: uppercase;
 }
@@ -142,10 +186,16 @@ p{
   font-size:1.2em;
   line-height: 1.7;
 }
+footer p {
+  text-align: left;
+  font-weight: 300;
+  color: white;
+}
+main.page div ul li {
+  margin: 1em 0;
+  font-size: 1.2em;
+}
 /*END TYPOGRAPHY STYLES*/
 /*UTILITY STYLES*/
-.grey{
-  background-color: #D5DAE3;
-  overflow: hidden;
-}
 /*END UTILITY STYLES*/
+/*TEST STYLES*/

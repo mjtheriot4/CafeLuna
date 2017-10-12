@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1em;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+/*LAYOUT*/
+body, html{height: 100%}
+main{
+  height: 100%;
+  width: 100%;
+  background-image: url("img/hero.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+.flex-container {
+  width: 100%;
+  height: 80%;
+  -webkit-display: flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  }
+.flex-item {
+  width: 40%;
+  height: auto%;
+  margin: 10px;
+}
+.flex-ul {
+  width:100%;
+  height: 20%;
+  padding: 0 15%;
+  -webkit-display: flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.flex-ul li {
+  width:20%;
+  list-style: none;
+}
